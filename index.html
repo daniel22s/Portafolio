@@ -1,268 +1,539 @@
 <!DOCTYPE html>
-<html class="dark" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Jose Daniel Cruz Cuba - Fullstack Developer</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#000000",
-                        "background-light": "#f7f7f7",
-                        "background-dark": "#191919"
-                    },
-                    fontFamily: {
-                        display: "Inter"
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.25rem",
-                        lg: "0.5rem",
-                        xl: "0.75rem",
-                        full: "9999px"
-                    }
-                }
-            }
-        };
+<html class="dark" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Jose Daniel Cruz Cuba - Fullstack Developer</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000000",
+              "background-light": "#f7f7f7",
+              "background-dark": "#191919",
+            },
+            fontFamily: {
+              display: "Inter",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
     </script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<style>
-        #mobile-menu {
-            transition: transform 0.3s ease-in-out;
-        }
-        .menu-open {
-            transform: translateX(0) !important;
-        }
-        .menu-closed {
-            transform: translateX(100%) !important;
-        }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <style>
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+      }
+      .menu-open {
+        transform: translateX(0) !important;
+      }
+      .menu-closed {
+        transform: translateX(100%) !important;
+      }
     </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
-<div class="relative min-h-screen w-full">
-<div class="layout-container flex h-full grow flex-col">
-<header class="sticky top-0 z-20 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-<div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 sm:px-6 lg:px-8 py-3">
-<div class="flex items-center gap-4">
-<a class="flex items-center gap-2" href="#">
-<div class="size-8 text-primary">
-<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_6_543)">
-<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
-<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
-</g>
-<defs>
-<clipPath id="clip0_6_543">
-<rect fill="white" height="48" width="48"></rect>
-</clipPath>
-</defs>
-</svg>
-</div>
-<h2 class="text-lg font-bold">Jose Daniel Cruz Cuba</h2>
-</a>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#about">Acerca de mí</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#projects">Proyectos</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contacto</a>
-<div class="flex gap-2">
-<a class="flex items-center justify-center size-10 rounded-full bg-gray-200 dark:bg-gray-700/50 hover:bg-primary/20 dark:hover:bg-primary/30 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">
-<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
-</svg>
-</a>
-<a class="flex items-center justify-center size-10 rounded-full bg-gray-200 dark:bg-gray-700/50 hover:bg-primary/20 dark:hover:bg-primary/30 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">
-<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
-</svg>
-</a>
-</div>
-</nav>
-<button class="md:hidden" id="menu-button">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-<div class="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-background-dark shadow-xl p-6 z-30 menu-closed" id="mobile-menu">
-<div class="flex justify-end mb-8">
-<button id="close-menu-button">
-<span class="material-symbols-outlined">close</span>
-</button>
-</div>
-<nav class="flex flex-col gap-6 text-center">
-<a class="text-lg font-medium hover:text-primary transition-colors" href="#about">Acerca de mí</a>
-<a class="text-lg font-medium hover:text-primary transition-colors" href="#projects">Proyectos</a>
-<a class="text-lg font-medium hover:text-primary transition-colors" href="#contact">Contacto</a>
-<div class="flex gap-4 justify-center mt-4">
-<a class="flex items-center justify-center size-12 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-primary/20 dark:hover:bg-primary/30 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">
-<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
-</svg>
-</a>
-<a class="flex items-center justify-center size-12 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-primary/20 dark:hover:bg-primary/30 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">
-<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
-</svg>
-</a>
-</div>
-</nav>
-</div>
-</header>
-<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
-<div class="flex flex-col items-center justify-center min-h-[50vh] text-center rounded-xl bg-cover bg-center p-8" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhIsVl1rIP3ixyOR6qywxC0gRPpHBRAHauLs5FEW8FPtEeLPJXZex1-LGw7xpIqf2MV7KG-D9Ua0wDBf9zrzFTtC1PJqxDJ7rdMDf1XNzWqAd9YB-JymFZ-cMyW_NI3na5xPuPoiM-GpL8bMx9DS6gRcY-w9qw2cKO0QVNY8-MYKh5PXnnfcmaFDDZ4ZYf7eo_9BBJvg4bDaMMVNTA-GHx2oRppWhEDlWz2JdOp9CiKprfRnH1l5Ig4p2Y5F1yM0WFbScRIyPnkl8");'>
-<div class="max-w-2xl">
-<h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">Jose Daniel Cruz Cuba</h1>
-<h2 class="mt-4 text-lg sm:text-xl text-white/90">Desarrollador Fullstack</h2>
-<a class="mt-8 inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg text-base hover:bg-primary/90 transition-all" href="#projects">
-                        Ver Proyectos
-                    </a>
-</div>
-</div>
-<section class="py-16 sm:py-24" id="about">
-<div class="container mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-<div class="lg:col-span-1 flex flex-col items-center">
-<img alt="Jose Daniel Cruz Cuba" class="rounded-full w-48 h-48 sm:w-64 sm:h-64 object-cover shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL7pI3ILOo_1-Xp57RmekDQmhNbQOGoYBmE-ITA1tLiAYT7CWz1_JKI56BB0L-S9bKqVrOr5GE7EMFWWJoUznQqaDlVg1b4DdjShLIHwil2PvkAQN9PxAWAZP4jAEkyug_ScdbkZ9Sx9iGIFlt5P0x_yLuJ5-2R4pNr6jf07-61VkRbOBnACh1YlwNY1VN-YA9BBznntPyTD6ayYOjjCZgGeUJ3KNK7-o765rtl-w1yB9OB-U_huIQN2kIxG22WA0tBGPkqmgvDvk"/>
-</div>
-<div class="lg:col-span-2 text-center lg:text-left">
-<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Acerca de mí</h2>
-<p class="mt-6 text-base sm:text-lg leading-8 text-gray-600 dark:text-gray-400">
-                                Soy un desarrollador fullstack apasionado por crear soluciones innovadoras y eficientes. Con una sólida experiencia en el ecosistema de JavaScript, me especializo en la construcción de aplicaciones web robustas y escalables, desde el frontend con React y Vue.js hasta el backend con Node.js y Express. Me encanta enfrentar nuevos desafíos y aprender continuamente para mantenerme al día con las últimas tecnologías y tendencias de la industria.
-                            </p>
-<div class="mt-10">
-<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Habilidades Clave</h3>
-<div class="flex flex-wrap gap-2 sm:gap-4 justify-center lg:justify-start">
-<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">JavaScript</span>
-<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">React</span>
-<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">Node.js</span>
-<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">Vue.js</span>
-<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">Express</span>
-<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">MongoDB</span>
-<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">PostgreSQL</span>
-<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">HTML5 &amp; CSS3</span>
-<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">Tailwind CSS</span>
-</div>
-</div>
-<a class="mt-8 inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-6 rounded-lg text-base hover:bg-primary/90 transition-all" href="#">
-<span class="material-symbols-outlined">download</span>
-                                Descargar CV
-                            </a>
-</div>
-</div>
-</div>
-</section>
-<section class="py-16 sm:py-24 bg-background-light dark:bg-background-dark" id="projects">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center">
-<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Proyectos Relevantes</h2>
-<p class="mt-4 text-base sm:text-lg leading-6 text-gray-600 dark:text-gray-400">Una selección de mis trabajos más destacados.</p>
-</div>
-<div class="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-<div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-<a href="#">
-<div class="w-full aspect-video bg-gray-200 dark:bg-gray-700">
-<img alt="Project 1 preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdJzLimLPa-giT9dtHAoaGj5z75AmFt8oQBLOAKw9eQ9GjShtFZf6QjqBILjNgL6Td1Bk62wTeWYSmRkLA6dV7qH4OT48brLrFqkfhxW-5advMDfjm2NcVEW4lkmOobFSweDpDXQB4hqD3HPd_qQqufF0DMH1ZUDXPD_nCRY8Cl0Ge0LbCUB1Ea1m_ARFva3LO7MgvPdy5-W08kbUcGW_EQomNcSZaUF1aCd22RmlfATdWjrRX__XLvjpq9U3O3SyXS0VvpPsa-Fc"/>
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-<div class="p-6 absolute bottom-0 left-0 w-full">
-<h3 class="text-lg sm:text-xl font-bold text-white">Aplicación de Gestión de Tareas</h3>
-<p class="mt-2 text-sm text-gray-300">Una aplicación web para gestionar tareas y proyectos, con funcionalidades de colaboración.</p>
-</div>
-</a>
-</div>
-<div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-<a href="#">
-<div class="w-full aspect-video bg-gray-200 dark:bg-gray-700">
-<img alt="Project 2 preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2AqvloKEEmxuDdPYaFXhnIqWpXL0h0XdogWDRTCeqDSaVIbnIKmYXPAgCL3A4hlAQt_zmbEQ8tx01V49dOLg-k8Qdr8DoEHf4z2Ihegw6QCri37XCI76CwXzQy07rPzfS1Jp7MET8czWCFGFVXE5GjlQjjlvbcZX-T5xOrUgJ9LoMB45Y8fR8o6rCY4hycfb2rkNUcilgvRZJqYKAztXkWHsbu9Kv33gYymsNsuC7yA5n2A5NxyTSxoqZNg1mCv9DJ8cBgJVVHzA"/>
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-<div class="p-6 absolute bottom-0 left-0 w-full">
-<h3 class="text-lg sm:text-xl font-bold text-white">Plataforma de E-commerce</h3>
-<p class="mt-2 text-sm text-gray-300">Plataforma de comercio electrónico con catálogo de productos y pasarela de pago.</p>
-</div>
-</a>
-</div>
-<div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-<a href="#">
-<div class="w-full aspect-video bg-gray-200 dark:bg-gray-700">
-<img alt="Project 3 preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCilts0iP8THKQAHoCJWK0YM996KHLhzaBJkbx9u9txxydWhRNZzPXohAJ5MjAlNCdPdF9OtY-9b578VnGlT0tDc1a75NPmaFFbY-8Cb5J0HfJDuOyfbzxWyPD3tD-6fSfJ22_Ea8DNIdrg98Qp2q7wTC6_mGF9LIu9qtqCxNBx4aV0tq4hFPtxt62_ddmPG3_m96JoJJLw7Ns8k-Gc7QOKjsAlcU-kY_tIEtWUAC-JbyoLxFvQO7tk3v0-p-ra-eVcJT22x6Jrrhw"/>
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-<div class="p-6 absolute bottom-0 left-0 w-full">
-<h3 class="text-lg sm:text-xl font-bold text-white">Sistema de Reservas Online</h3>
-<p class="mt-2 text-sm text-gray-300">Sistema para realizar reservas online de servicios, con gestión de disponibilidad.</p>
-</div>
-</a>
-</div>
-</div>
-</div>
-</section>
-<section class="py-16 sm:py-24" id="contact">
-<div class="max-w-2xl mx-auto text-center px-4">
-<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Contacto</h2>
-<p class="mt-4 text-base sm:text-lg leading-8 text-gray-600 dark:text-gray-400">¿Interesado en colaborar? No dudes en contactarme.</p>
-<form action="#" class="mt-12 grid grid-cols-1 gap-y-6" method="POST">
-<div>
-<label class="sr-only" for="name">Nombre</label>
-<input autocomplete="name" class="block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 py-3 px-4 text-gray-900 dark:text-white shadow-sm focus:border-primary focus:ring-primary" id="name" name="name" placeholder="Tu nombre" type="text"/>
-</div>
-<div>
-<label class="sr-only" for="email">Email</label>
-<input autocomplete="email" class="block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 py-3 px-4 text-gray-900 dark:text-white shadow-sm focus:border-primary focus:ring-primary" id="email" name="email" placeholder="Tu email" type="email"/>
-</div>
-<div>
-<label class="sr-only" for="message">Mensaje</label>
-<textarea class="block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 py-3 px-4 text-gray-900 dark:text-white shadow-sm focus:border-primary focus:ring-primary" id="message" name="message" placeholder="Tu mensaje" rows="4"></textarea>
-</div>
-<div class="flex justify-center">
-<button class="bg-primary text-white font-bold py-3 px-8 rounded-lg text-base hover:bg-primary/90 transition-all w-full sm:w-auto" type="submit">Enviar Mensaje</button>
-</div>
-</form>
-<div class="mt-12">
-<div class="flex justify-center gap-6">
-<a class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors" href="#">
-<svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-</svg>
-<span class="sr-only">LinkedIn</span>
-</a>
-<a class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors" href="#">
-<svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
-</svg>
-<span class="sr-only">GitHub</span>
-</a>
-</div>
-<p class="mt-8 text-base text-gray-600 dark:text-gray-400">
-<span class="inline-flex items-center justify-center w-3 h-3 me-2 bg-green-500 rounded-full"></span>
-                            Disponible para nuevos proyectos
-                        </p>
-</div>
-</div>
-</section>
-</main>
-</div>
-</div>
-<script>
-    const menuButton = document.getElementById('menu-button');
-    const closeMenuButton = document.getElementById('close-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    function toggleMenu() {
-        mobileMenu.classList.toggle('menu-open');
-        mobileMenu.classList.toggle('menu-closed');
-    }
-    menuButton.addEventListener('click', toggleMenu);
-    closeMenuButton.addEventListener('click', toggleMenu);
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (mobileMenu.classList.contains('menu-open')) {
-                toggleMenu();
-            }
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200"
+  >
+    <div class="relative min-h-screen w-full">
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="sticky top-0 z-20 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm"
+        >
+          <div
+            class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 sm:px-6 lg:px-8 py-3"
+          >
+            <div class="flex items-center gap-4">
+              <a class="flex items-center gap-2" href="#">
+                <div class="size-8 text-primary">
+                  <svg
+                    fill="none"
+                    viewBox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_6_543)">
+                      <path
+                        d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z"
+                        fill="currentColor"
+                      ></path>
+                      <path
+                        clip-rule="evenodd"
+                        d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z"
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                      ></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_6_543">
+                        <rect fill="white" height="48" width="48"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <h2 class="text-lg font-bold">Jose Daniel Cruz Cuba</h2>
+              </a>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#about"
+                >Acerca de mí</a
+              >
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#projects"
+                >Proyectos</a
+              >
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#contact"
+                >Contacto</a
+              >
+              <div class="flex gap-2">
+                <a
+                  class="flex items-center justify-center size-10 rounded-full bg-gray-200 dark:bg-gray-700/50 hover:bg-primary/20 dark:hover:bg-primary/30 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                  href="#"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="20"
+                    viewBox="0 0 256 256"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  class="flex items-center justify-center size-10 rounded-full bg-gray-200 dark:bg-gray-700/50 hover:bg-primary/20 dark:hover:bg-primary/30 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                  href="#"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="20"
+                    viewBox="0 0 256 256"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </nav>
+            <button class="md:hidden" id="menu-button">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+          </div>
+        </header>
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div
+            class="flex flex-col items-center justify-center min-h-[50vh] text-center rounded-xl bg-cover bg-center p-8"
+            style="
+              background-image: linear-gradient(
+                  rgba(0, 0, 0, 0.4) 0%,
+                  rgba(0, 0, 0, 0.7) 100%
+                ),
+                url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhIsVl1rIP3ixyOR6qywxC0gRPpHBRAHauLs5FEW8FPtEeLPJXZex1-LGw7xpIqf2MV7KG-D9Ua0wDBf9zrzFTtC1PJqxDJ7rdMDf1XNzWqAd9YB-JymFZ-cMyW_NI3na5xPuPoiM-GpL8bMx9DS6gRcY-w9qw2cKO0QVNY8-MYKh5PXnnfcmaFDDZ4ZYf7eo_9BBJvg4bDaMMVNTA-GHx2oRppWhEDlWz2JdOp9CiKprfRnH1l5Ig4p2Y5F1yM0WFbScRIyPnkl8');
+            "
+          >
+            <div class="max-w-2xl">
+              <h1
+                class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight"
+              >
+                Jose Daniel Cruz Cuba
+              </h1>
+              <h2 class="mt-4 text-lg sm:text-xl text-white/90">
+                Desarrollador Fullstack
+              </h2>
+              <a
+                class="mt-8 inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg text-base hover:bg-primary/90 transition-all"
+                href="#projects"
+              >
+                Ver Proyectos
+              </a>
+            </div>
+          </div>
+          <section class="py-16 sm:py-24" id="about">
+            <div class="container mx-auto">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                <div class="lg:col-span-1 flex flex-col items-center">
+                  <img
+                    alt="Jose Daniel Cruz Cuba"
+                    class="rounded-full w-48 h-48 sm:w-64 sm:h-64 object-cover shadow-xl"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL7pI3ILOo_1-Xp57RmekDQmhNbQOGoYBmE-ITA1tLiAYT7CWz1_JKI56BB0L-S9bKqVrOr5GE7EMFWWJoUznQqaDlVg1b4DdjShLIHwil2PvkAQN9PxAWAZP4jAEkyug_ScdbkZ9Sx9iGIFlt5P0x_yLuJ5-2R4pNr6jf07-61VkRbOBnACh1YlwNY1VN-YA9BBznntPyTD6ayYOjjCZgGeUJ3KNK7-o765rtl-w1yB9OB-U_huIQN2kIxG22WA0tBGPkqmgvDvk"
+                  />
+                </div>
+                <div class="lg:col-span-2 text-center lg:text-left">
+                  <h2
+                    class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+                  >
+                    Acerca de mí
+                  </h2>
+                  <p
+                    class="mt-6 text-base sm:text-lg leading-8 text-gray-600 dark:text-gray-400"
+                  >
+                    Soy un desarrollador fullstack apasionado por crear
+                    soluciones innovadoras y eficientes. Con una sólida
+                    experiencia en el ecosistema de JavaScript, me especializo
+                    en la construcción de aplicaciones web robustas y
+                    escalables, desde el frontend con React y Vue.js hasta el
+                    backend con Node.js y Express. Me encanta enfrentar nuevos
+                    desafíos y aprender continuamente para mantenerme al día con
+                    las últimas tecnologías y tendencias de la industria.
+                  </p>
+                  <div class="mt-10">
+                    <h3
+                      class="text-xl font-bold text-gray-900 dark:text-white mb-4"
+                    >
+                      Habilidades Clave
+                    </h3>
+                    <div
+                      class="flex flex-wrap gap-2 sm:gap-4 justify-center lg:justify-start"
+                    >
+                      <span
+                        class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                        >JavaScript</span
+                      >
+                      <span
+                        class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                        >React</span
+                      >
+                      <span
+                        class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                        >Node.js</span
+                      >
+                      <span
+                        class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                        >Vue.js</span
+                      >
+                      <span
+                        class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                        >Express</span
+                      >
+                      <span
+                        class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                        >MongoDB</span
+                      >
+                      <span
+                        class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                        >PostgreSQL</span
+                      >
+                      <span
+                        class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                        >HTML5 &amp; CSS3</span
+                      >
+                      <span
+                        class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                        >Tailwind CSS</span
+                      >
+                    </div>
+                  </div>
+                  <a
+                    class="mt-8 inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-6 rounded-lg text-base hover:bg-primary/90 transition-all"
+                    href="#"
+                  >
+                    <span class="material-symbols-outlined">download</span>
+                    Descargar CV
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="py-16 sm:py-24 bg-background-light dark:bg-background-dark"
+            id="projects"
+          >
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="text-center">
+                <h2
+                  class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+                >
+                  Proyectos Relevantes
+                </h2>
+                <p
+                  class="mt-4 text-base sm:text-lg leading-6 text-gray-600 dark:text-gray-400"
+                >
+                  Una selección de mis trabajos más destacados.
+                </p>
+              </div>
+              <div
+                class="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"
+              >
+                <div
+                  class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                >
+                  <a href="#">
+                    <div
+                      class="w-full aspect-video bg-gray-200 dark:bg-gray-700"
+                    >
+                      <img
+                        alt="Project 1 preview"
+                        class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdJzLimLPa-giT9dtHAoaGj5z75AmFt8oQBLOAKw9eQ9GjShtFZf6QjqBILjNgL6Td1Bk62wTeWYSmRkLA6dV7qH4OT48brLrFqkfhxW-5advMDfjm2NcVEW4lkmOobFSweDpDXQB4hqD3HPd_qQqufF0DMH1ZUDXPD_nCRY8Cl0Ge0LbCUB1Ea1m_ARFva3LO7MgvPdy5-W08kbUcGW_EQomNcSZaUF1aCd22RmlfATdWjrRX__XLvjpq9U3O3SyXS0VvpPsa-Fc"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                    ></div>
+                    <div class="p-6 absolute bottom-0 left-0 w-full">
+                      <h3 class="text-lg sm:text-xl font-bold text-white">
+                        Aplicación de Gestión de Tareas
+                      </h3>
+                      <p class="mt-2 text-sm text-gray-300">
+                        Una aplicación web para gestionar tareas y proyectos,
+                        con funcionalidades de colaboración.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                >
+                  <a href="#">
+                    <div
+                      class="w-full aspect-video bg-gray-200 dark:bg-gray-700"
+                    >
+                      <img
+                        alt="Project 2 preview"
+                        class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2AqvloKEEmxuDdPYaFXhnIqWpXL0h0XdogWDRTCeqDSaVIbnIKmYXPAgCL3A4hlAQt_zmbEQ8tx01V49dOLg-k8Qdr8DoEHf4z2Ihegw6QCri37XCI76CwXzQy07rPzfS1Jp7MET8czWCFGFVXE5GjlQjjlvbcZX-T5xOrUgJ9LoMB45Y8fR8o6rCY4hycfb2rkNUcilgvRZJqYKAztXkWHsbu9Kv33gYymsNsuC7yA5n2A5NxyTSxoqZNg1mCv9DJ8cBgJVVHzA"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                    ></div>
+                    <div class="p-6 absolute bottom-0 left-0 w-full">
+                      <h3 class="text-lg sm:text-xl font-bold text-white">
+                        Plataforma de E-commerce
+                      </h3>
+                      <p class="mt-2 text-sm text-gray-300">
+                        Plataforma de comercio electrónico con catálogo de
+                        productos y pasarela de pago.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                >
+                  <a href="#">
+                    <div
+                      class="w-full aspect-video bg-gray-200 dark:bg-gray-700"
+                    >
+                      <img
+                        alt="Project 3 preview"
+                        class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCilts0iP8THKQAHoCJWK0YM996KHLhzaBJkbx9u9txxydWhRNZzPXohAJ5MjAlNCdPdF9OtY-9b578VnGlT0tDc1a75NPmaFFbY-8Cb5J0HfJDuOyfbzxWyPD3tD-6fSfJ22_Ea8DNIdrg98Qp2q7wTC6_mGF9LIu9qtqCxNBx4aV0tq4hFPtxt62_ddmPG3_m96JoJJLw7Ns8k-Gc7QOKjsAlcU-kY_tIEtWUAC-JbyoLxFvQO7tk3v0-p-ra-eVcJT22x6Jrrhw"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                    ></div>
+                    <div class="p-6 absolute bottom-0 left-0 w-full">
+                      <h3 class="text-lg sm:text-xl font-bold text-white">
+                        Sistema de Reservas Online
+                      </h3>
+                      <p class="mt-2 text-sm text-gray-300">
+                        Sistema para realizar reservas online de servicios, con
+                        gestión de disponibilidad.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="py-16 sm:py-24" id="contact">
+            <div class="max-w-2xl mx-auto text-center px-4">
+              <h2
+                class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+              >
+                Contacto
+              </h2>
+              <p
+                class="mt-4 text-base sm:text-lg leading-8 text-gray-600 dark:text-gray-400"
+              >
+                ¿Interesado en colaborar? No dudes en contactarme.
+              </p>
+              <form
+                action="#"
+                class="mt-12 grid grid-cols-1 gap-y-6"
+                method="POST"
+              >
+                <div>
+                  <label class="sr-only" for="name">Nombre</label>
+                  <input
+                    autocomplete="name"
+                    class="block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 py-3 px-4 text-gray-900 dark:text-white shadow-sm focus:border-primary focus:ring-primary"
+                    id="name"
+                    name="name"
+                    placeholder="Tu nombre"
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <label class="sr-only" for="email">Email</label>
+                  <input
+                    autocomplete="email"
+                    class="block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 py-3 px-4 text-gray-900 dark:text-white shadow-sm focus:border-primary focus:ring-primary"
+                    id="email"
+                    name="email"
+                    placeholder="Tu email"
+                    type="email"
+                  />
+                </div>
+                <div>
+                  <label class="sr-only" for="message">Mensaje</label>
+                  <textarea
+                    class="block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 py-3 px-4 text-gray-900 dark:text-white shadow-sm focus:border-primary focus:ring-primary"
+                    id="message"
+                    name="message"
+                    placeholder="Tu mensaje"
+                    rows="4"
+                  ></textarea>
+                </div>
+                <div class="flex justify-center">
+                  <button
+                    class="bg-primary text-white font-bold py-3 px-8 rounded-lg text-base hover:bg-primary/90 transition-all w-full sm:w-auto"
+                    type="submit"
+                  >
+                    Enviar Mensaje
+                  </button>
+                </div>
+              </form>
+              <div class="mt-12">
+                <div class="flex justify-center gap-6">
+                  <a
+                    class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors"
+                    href="#"
+                  >
+                    <svg
+                      class="h-8 w-8"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">LinkedIn</span>
+                  </a>
+                  <a
+                    class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors"
+                    href="#"
+                  >
+                    <svg
+                      class="h-8 w-8"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">GitHub</span>
+                  </a>
+                </div>
+                <p class="mt-8 text-base text-gray-600 dark:text-gray-400">
+                  <span
+                    class="inline-flex items-center justify-center w-3 h-3 me-2 bg-green-500 rounded-full"
+                  ></span>
+                  Disponible para nuevos proyectos
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <div
+      class="fixed top-0 left-0 h-full w-full bg-background-dark shadow-xl p-6 z-50 menu-closed"
+      id="mobile-menu"
+    >
+      <div class="flex justify-end mb-8">
+        <button id="close-menu-button">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-6 text-center">
+        <a class="text-lg font-medium hover:text-primary transition-colors" href="#about">Acerca de mí</a>
+        <a class="text-lg font-medium hover:text-primary transition-colors" href="#projects">Proyectos</a>
+        <a class="text-lg font-medium hover:text-primary transition-colors" href="#contact">Contacto</a>
+        <div class="flex gap-4 justify-center mt-4">
+          <a
+            class="flex items-center justify-center size-12 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-primary/20 dark:hover:bg-primary/30 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+            href="#"
+          >
+            <svg
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 256 256"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"
+            ></path>
+          </svg>
+          </a>
+          <a
+            class="flex items-center justify-center size-12 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-primary/20 dark:hover:bg-primary/30 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+            href="#"
+          >
+            <svg
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 256 256"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <script>
+      const menuButton = document.getElementById("menu-button");
+      const closeMenuButton = document.getElementById("close-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      function toggleMenu() {
+        mobileMenu.classList.toggle("menu-open");
+        mobileMenu.classList.toggle("menu-closed");
+      }
+      menuButton.addEventListener("click", toggleMenu);
+      closeMenuButton.addEventListener("click", toggleMenu);
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (mobileMenu.classList.contains("menu-open")) {
+            toggleMenu();
+          }
         });
-    });
-</script>
-</body></html>
+      });
+    </script>
+  </body>
+</html>
